@@ -12,6 +12,6 @@ Description:
   Play as Dodo, find, collect, and deliver tools to the mechanic!
 
 Tools used: 
-  Unity and C#
+  Unity and C# and Aseprite
 
 
