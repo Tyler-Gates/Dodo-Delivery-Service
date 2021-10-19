@@ -11,6 +11,9 @@ public class GameOver : MonoBehaviour
     }
     void Update()
     {
+        _livesManager = FindObjectOfType<LivesManager>();
+        GlobalControl.Instance.lives = -1;
+        _livesManager.SetLivesCount(GlobalControl.Instance.lives);
         if (!Input.GetKey(KeyCode.R)) return;
         GlobalControl.Instance.lives = 3;
         _livesManager = FindObjectOfType<LivesManager>();

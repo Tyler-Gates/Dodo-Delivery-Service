@@ -10,6 +10,7 @@ public class door : MonoBehaviour
         var player = other.GetComponent<PlayerController2D>();
         if (!(Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))) return;
         animator.Play(SceneManager.GetActiveScene().buildIndex == 2 ? "doorl_open" : "door_open");
+        if (!player) return;
         player.open = true;
         player.ChangeLevel();
     }

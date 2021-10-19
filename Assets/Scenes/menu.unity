@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 51864905}
   - component: {fileID: 51864904}
   - component: {fileID: 51864903}
+  - component: {fileID: 51864908}
   m_Layer: 7
   m_Name: Platforms
   m_TagString: Untagged
@@ -178,56 +179,44 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 51864905}
     m_ColliderPaths:
-    - - X: 110000100
-        Y: -50000041
-      - X: 110000100
-        Y: 60000041
-      - X: 110000041
-        Y: 60000100
-      - X: -110000041
-        Y: 60000100
-      - X: -110000100
-        Y: 60000041
-      - X: -110000100
-        Y: -50000041
-      - X: -110000041
-        Y: -50000100
-      - X: 110000041
-        Y: -50000100
-    - - X: -89999900
-        Y: -39999900
-      - X: -89999900
-        Y: 41
-      - X: -89999959
-        Y: 100
-      - X: -99999900
-        Y: 100
-      - X: -99999900
-        Y: 49999900
-      - X: 99999900
-        Y: 49999900
-      - X: 99999900
-        Y: 100
-      - X: 89999959
-        Y: 100
-      - X: 89999900
-        Y: 41
-      - X: 89999900
-        Y: -39999900
+    - - X: 110000000
+        Y: 60000000
+      - X: -110000000
+        Y: 60000000
+      - X: -110000000
+        Y: -50000000
+      - X: 110000000
+        Y: -50000000
+    - - X: -90000000
+        Y: -40000000
+      - X: -90000000
+        Y: 0
+      - X: -100000000
+        Y: 0
+      - X: -100000000
+        Y: 50000000
+      - X: 100000000
+        Y: 50000000
+      - X: 100000000
+        Y: 0
+      - X: 90000000
+        Y: 0
+      - X: 90000000
+        Y: -40000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 10.999974, y: -5.00001}
-      - {x: 10.999974, y: 6.00001}
-      - {x: -11.00001, y: 5.9999747}
-      - {x: -10.999974, y: -5.00001}
-    - - {x: 8.99999, y: -3.999961}
-      - {x: -8.99999, y: -3.999961}
-      - {x: -9.000026, y: 0.00001}
-      - {x: -9.99999, y: 0.0000394}
-      - {x: -9.999961, y: 4.99999}
-      - {x: 9.99999, y: 4.999961}
-      - {x: 9.999961, y: 0.00001}
-      - {x: 8.99999, y: -0.0000252}
+    - - {x: 10.99997, y: -5}
+      - {x: 10.99997, y: 6}
+      - {x: -11, y: 5.999971}
+      - {x: -10.99997, y: -5}
+    - - {x: 9, y: -3.9999704}
+      - {x: -9, y: -3.9999704}
+      - {x: -9.00003, y: 0}
+      - {x: -10, y: 0.0000294}
+      - {x: -9.99997, y: 5}
+      - {x: 10, y: 4.9999704}
+      - {x: 9.99997, y: 0}
+      - {x: 9, y: -0.000029300001}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &51864904
@@ -238,19 +227,19 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51864901}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 0.0001
+  m_LinearDrag: 100
+  m_AngularDrag: 0
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3a5f62c9681a4db49a1c706e1c04a9ba, type: 2}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
+  m_Constraints: 7
 --- !u!19719996 &51864905
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -1085,6 +1074,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &51864908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51864901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d69c59bc83a7345abc83ad134c781a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1863269000}
+  fric1: {fileID: 6200000, guid: 3a5f62c9681a4db49a1c706e1c04a9ba, type: 2}
+  platform: {fileID: 51864904}
+  fric2: {fileID: 6200000, guid: f2828dc3bfbd1544d92c9cd0c0e3f231, type: 2}
 --- !u!1 &339654204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,7 +1562,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.02}
   m_SpriteTilingProperty:
@@ -1730,7 +1735,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2016984315}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.06, y: -3.46, z: 0}
+  m_LocalPosition: {x: -6.067, y: -3.453, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1950295391}

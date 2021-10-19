@@ -756,6 +756,7 @@ GameObject:
   - component: {fileID: 817203990}
   - component: {fileID: 817203991}
   - component: {fileID: 817203992}
+  - component: {fileID: 817203993}
   m_Layer: 7
   m_Name: Tilemap_floors
   m_TagString: Untagged
@@ -3311,7 +3312,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f2828dc3bfbd1544d92c9cd0c0e3f231, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -3771,6 +3772,22 @@ CompositeCollider2D:
       - {x: 12.06253, y: -3}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &817203993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817203986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d69c59bc83a7345abc83ad134c781a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1319961143}
+  fric1: {fileID: 6200000, guid: 3a5f62c9681a4db49a1c706e1c04a9ba, type: 2}
+  platform: {fileID: 817203991}
+  fric2: {fileID: 6200000, guid: f2828dc3bfbd1544d92c9cd0c0e3f231, type: 2}
 --- !u!1 &1011672971
 GameObject:
   m_ObjectHideFlags: 0
