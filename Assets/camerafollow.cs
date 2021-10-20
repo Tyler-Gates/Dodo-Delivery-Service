@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class camerafollow : MonoBehaviour
+public class CameraFollow : MonoBehaviour
 {
     public Transform target;
 

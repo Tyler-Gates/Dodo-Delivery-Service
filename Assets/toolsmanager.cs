@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class toolsmanager : MonoBehaviour
+public class ToolsManager : MonoBehaviour
 {
     [SerializeField] Image tool;
     void Update()

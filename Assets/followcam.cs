@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class followcam : MonoBehaviour
+public class FollowCam : MonoBehaviour
 {
     private float camerax;
     private float cameray;
